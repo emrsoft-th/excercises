@@ -7,7 +7,7 @@ register(
   {
     description: 'Says hello to whoever is passed in.',
     author: 'starter-kit',
-    addedIn: 'v0.1.1',
+    addedIn: 'v0.1.2',
   },
   (who = 'world') => `Hello, ${who}!`
 );
