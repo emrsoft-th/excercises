@@ -249,7 +249,7 @@ async function cmdDeploy() {
   const child = spawn(process.execPath, ['app.js'], {
     cwd: ROOT,
     env: { ...process.env, PORT: String(PORT) },
-    detached: !IS_WINDOWS,          // POSIX: escape our process group
+    detached: true,                 // escape our process group; on Windows a non-detached child is killed when the parent exits
     windowsHide: true,              // Windows: no flash of a console window
     stdio: ['ignore', log, log],
   });
